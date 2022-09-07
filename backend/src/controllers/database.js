@@ -1,6 +1,5 @@
 const mysql = require("mysql")
-require('dotenv').config();
-
+const config = require("../config.json")
 class DB {
     constructor() {
         this.establishedConnection = null;
@@ -10,12 +9,9 @@ class DB {
     }
 
     connection() {
-        this.establishedConnection = mysql.createConnection({
-            host: process.env.DB_HOST,
-            user: process.env.DB_USER,
-            password: process.env.DB_PWD,
-            database: process.env.DB_DATABASE
-        });
+        this.establishedConnection = mysql.createConnection(
+            config[config["use_preset"]]
+        );
 
         this.establishedConnection.connect(function (err) {
             if (err) {

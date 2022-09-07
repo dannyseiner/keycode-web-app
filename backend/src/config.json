@@ -1,0 +1,23 @@
+{
+  "use_preset": "macos",
+
+  "windows": {
+    "host": "localhost",
+    "user": "admin",
+    "password": "",
+    "database": "key-registration-app"
+  },
+  "macos": {
+    "host": "localhost",
+    "user": "admin",
+    "password": "",
+    "database": "key-registration-app",
+    "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+  },
+  "server": {
+    "host": "77.22.44.33",
+    "user": "userName339294",
+    "password": "thisIsFakeConnection :)",
+    "database": "key-registration-app"
+  }
+}
